@@ -2,11 +2,11 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Fade from '@material-ui/core/Fade';
 
-import { Animated } from 'components';
+import { Animated, LinkList } from '../../components';
 
 import content from './content';
 
-const { tagline, title, subtitle } = content;
+const { tagline, title, subtitle, links } = content;
 
 const Welcome = () => (
   <>
@@ -21,6 +21,7 @@ const Welcome = () => (
     <Typography variant='h3' color='textPrimary'>
       {subtitle}
     </Typography>
+    <LinkList links={links} />
   </>
 );
 

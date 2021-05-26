@@ -16,7 +16,8 @@ const MainNavigation = ({ classes, options }: Props) => (
         <Link
           to={link.to}
           className={classes.navLink}
-          activeClassName={classes.navLinkActive}>
+          activeClassName={classes.navLinkActive}
+          target={link.newTab ? '_blank' : '_self'}>
           <span>{link.text}</span>
         </Link>
       </li>

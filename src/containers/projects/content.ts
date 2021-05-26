@@ -1,8 +1,9 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const content = {
-  title: 'About.',
-  subtitle: 'Find out more on Github',
+  tagline: '',
+  title: 'Bryan Szendel.',
+  subtitle: 'FullStack Developer. Problem Solver. JavaScript Lover.',
   links: [
     {
       to: 'https://github.com/bryanszendel',
@@ -20,6 +21,15 @@ const content = {
       to: 'mailto:bryan.szendel@gmail.com',
       text: 'bryan.szendel@gmail.com',
       Icon: FaEnvelope,
+      newTab: true,
+    },
+  ],
+  projects: [
+    {
+      to: '',
+      title: '',
+      description: '',
+      Icon: '',
       newTab: true,
     },
   ],
