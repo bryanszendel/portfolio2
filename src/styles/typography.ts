@@ -1,4 +1,6 @@
-const typography = typography => ({
+import { Typography } from '@material-ui/core/styles/createTypography';
+
+const typography = (typography: Typography) => ({
   fontFamily: 'Roboto',
   fontSize: 16,
   h1: {
@@ -29,3 +31,4 @@ const typography = typography => ({
 });
 
 export default typography;
+

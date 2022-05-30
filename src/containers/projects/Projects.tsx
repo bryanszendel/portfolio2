@@ -5,24 +5,74 @@ import Fade from '@material-ui/core/Fade';
 import { Animated, LinkList } from '../../components';
 
 import content from './content';
+import { Container, Link } from '@material-ui/core';
+import styles from './style';
+import { withStyles } from '@material-ui/styles';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
-const { tagline, title, subtitle, links } = content;
+const { tagline, title, subtitle, links, projects } = content;
 
-const Projects = () => (
+interface Props {
+  classes: any;
+}
+
+const Projects = ({ classes }) => (
   <>
-    <Typography variant='h3' color='textPrimary'>
-      {tagline}
-    </Typography>
     <Fade in timeout={1000}>
-      <Typography variant='h1' color='textPrimary'>
-        <Animated>{title}</Animated>
+      <Typography variant='h4' color='textPrimary'>
+        Projects:
       </Typography>
     </Fade>
-    <Typography variant='h3' color='textPrimary'>
-      {subtitle}
-    </Typography>
-    <LinkList links={links} />
+    {projects.map((project, index) => (
+      <Container key={index} className={classes.container}>
+        <Fade in timeout={1000}>
+          <Typography
+            variant='h6'
+            color='textPrimary'
+            className={project.link ? classes.title : classes.noHref}>
+            {project.title}
+          </Typography>
+        </Fade>
+        <Fade in timeout={1000}>
+          <Typography color='textPrimary' className={classes.description}>
+            {project.description.map(descript => (
+              <p>{descript}</p>
+            ))}
+          </Typography>
+        </Fade>
+        {project.github && (
+          <Fade in timeout={1000}>
+            <Typography>
+              <Link
+                className={classes.github}
+                href={project.github}
+                target='_blank'
+                rel='noopener'>
+                <FaArrowAltCircleRight />
+                <div className={classes.link}>View on Github</div>
+              </Link>
+            </Typography>
+          </Fade>
+        )}
+
+        {project.link && (
+          <Fade in timeout={1000}>
+            <Typography>
+              <Link
+                className={classes.github}
+                href={project.link}
+                target='_blank'
+                rel='noopener'>
+                <FaArrowAltCircleRight />
+                <div className={classes.link}>View Live</div>
+              </Link>
+            </Typography>
+          </Fade>
+        )}
+      </Container>
+    ))}
   </>
 );
 
-export default Projects;
+export default withStyles(styles)(Projects);
+

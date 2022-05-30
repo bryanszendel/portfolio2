@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Layout, SEO } from 'components';
-import { BlogPostList } from 'containers';
+import { Layout, SEO } from '../components';
+import { BlogPostList } from '../containers';
 
 const BlogPage = () => (
   <Layout noBackground>
@@ -11,3 +11,4 @@ const BlogPage = () => (
 );
 
 export default BlogPage;
+

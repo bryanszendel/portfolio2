@@ -5,6 +5,10 @@ const theme = {
   app: {
     maxWidth: muiTheme.typography.pxToRem(960),
   },
+  container: {
+    maxWidth: 1220,
+  },
 };
 
 export default theme;
+

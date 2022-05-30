@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Layout, SEO } from 'components';
-import { Welcome } from 'containers';
+import { Layout, SEO } from '../components';
+import { Welcome } from '../containers';
 
 const IndexPage = () => (
   <Layout>
@@ -11,3 +11,4 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
