@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter",
+  "name": "bryan-szendel-portfolio2",
   "private": true,
-  "description": "Gatsby Starter",
+  "description": "Portfolio site for Bryan Szendel",
   "version": "1.2.0",
-  "author": "Polychronis Papadakis <polychronis.papadakis@gmail.com>",
+  "author": "Bryan Szendel <bryan.szendel@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/styles": "^4.11.3",
@@ -56,9 +56,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chronisp/gatsby-starter"
-  },
-  "bugs": {
-    "url": "https://github.com/chronisp/gatsby-starter/issues"
+    "url": "https://github.com/bryanszendel/portfolio2"
   }
 }
+
